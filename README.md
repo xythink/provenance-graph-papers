@@ -17,6 +17,8 @@
 
 ## 📋 Contents
 
+- [**方法对比表 (NEW)**](COMPARISON.md)
+- [**论文解读 (NEW)**](reading/)
 - [Survey](#survey)
 - [APT Detection](#apt-detection)
   - [Graph Neural Networks](#graph-neural-networks)
