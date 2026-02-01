@@ -4,8 +4,8 @@
     <b>终端溯源图与APT检测相关论文集合</b>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/papers-10-blue" alt="papers">
-    <img src="https://img.shields.io/badge/last%20update-2026--01-green" alt="update">
+    <img src="https://img.shields.io/badge/papers-19-blue" alt="papers">
+    <img src="https://img.shields.io/badge/last%20update-2026--02-green" alt="update">
     <img src="https://img.shields.io/badge/maintained%20by-Clawdbot-orange" alt="clawdbot">
   </p>
   <p>
@@ -22,7 +22,11 @@
   - [Graph Neural Networks](#graph-neural-networks)
   - [LLM-based Methods](#llm-based-methods)
   - [Reinforcement Learning](#reinforcement-learning)
+  - [Transformer-based](#transformer-based)
+  - [Few-Shot Learning](#few-shot-learning)
+- [Attack Path & Tactic Recognition](#attack-path--tactic-recognition)
 - [Graph Construction & Representation](#graph-construction--representation)
+- [Lifelong Learning & Concept Drift](#lifelong-learning--concept-drift)
 - [Datasets](#datasets)
 
 ---
@@ -37,33 +41,45 @@
 
 ### Graph Neural Networks
 
-1. **MAGIC: Detecting Advanced Persistent Threats via Masked Graph Representation Learning.** USENIX Security 2024. [paper](https://arxiv.org/abs/2310.09831) [pdf](MAGIC_2023.pdf)
+1. **APT-MCL: An Adaptive APT Detection System Based on Multi-View Collaborative Provenance Graph Learning.** arxiv 2026. [paper](https://arxiv.org/abs/2501.07567) [pdf](APT-MCL_2026.pdf)
+
+   *Mingqi Lv, Shanshan Zhang, Haiwen Liu, Tieming Chen, Tiantian Zhu.*
+
+2. **MAGIC: Detecting Advanced Persistent Threats via Masked Graph Representation Learning.** USENIX Security 2024. [paper](https://arxiv.org/abs/2310.09831) [pdf](MAGIC_2023.pdf)
 
    *Zian Jia, Yun Xiong, Yuhong Nan, Yao Zhang, Jinjing Zhao, Mi Wen.*
 
-2. **NODLINK: An Online System for Fine-Grained APT Attack Detection and Investigation.** NDSS 2024. [paper](https://arxiv.org/abs/2311.02331) [pdf](NODLINK_2023.pdf)
+3. **NODLINK: An Online System for Fine-Grained APT Attack Detection and Investigation.** NDSS 2024. [paper](https://arxiv.org/abs/2311.02331) [pdf](NODLINK_2023.pdf)
 
    *Shaofei Li, Feng Dong, Xusheng Xiao, Haoyu Wang, Fei Shao, Jiedong Chen, Yao Guo, Xiangqun Chen, Ding Li.*
 
-3. **TFLAG: Towards Practical APT Detection via Deviation-Aware Learning on Temporal Provenance Graph.** arxiv 2025. [paper](https://arxiv.org/abs/2501.06997) [pdf](TFLAG_2025.pdf)
+4. **TFLAG: Towards Practical APT Detection via Deviation-Aware Learning on Temporal Provenance Graph.** arxiv 2025. [paper](https://arxiv.org/abs/2501.06997) [pdf](TFLAG_2025.pdf)
 
    *Wenhan Jiang, Tingting Chai, Hongri Liu, Kai Wang, Hongke Zhang.*
 
-4. **P3GNN: A Privacy-Preserving Provenance Graph-Based Model for APT Detection in SDN.** arxiv 2024. [paper](https://arxiv.org/abs/2406.12003) [pdf](P3GNN_2024.pdf)
+5. **P3GNN: A Privacy-Preserving Provenance Graph-Based Model for APT Detection in SDN.** arxiv 2024. [paper](https://arxiv.org/abs/2406.12003) [pdf](P3GNN_2024.pdf)
 
    *Hedyeh Nazari, Abbas Yazdinejad, Ali Dehghantanha, Fattane Zarrinkalam, Gautam Srivastava.*
 
-5. **GraphDART: Graph Distillation for Efficient Advanced Persistent Threat Detection.** arxiv 2025. [paper](https://arxiv.org/abs/2501.03252) [pdf](GraphDART_2025.pdf)
+6. **GraphDART: Graph Distillation for Efficient Advanced Persistent Threat Detection.** arxiv 2025. [paper](https://arxiv.org/abs/2501.03252) [pdf](GraphDART_2025.pdf)
 
    *Saba Fathi Rabooki, Bowen Li, Falih Gozi Febrinanto, Ciyuan Peng, Elham Naghizade, Fengling Han, Feng Xia.*
 
-6. **Sentient: Detecting APTs Via Capturing Indirect Dependencies and Behavioral Logic.** arxiv 2025. [paper](https://arxiv.org/abs/2502.05766) [pdf](Sentient_2025.pdf)
+7. **Sentient: Detecting APTs Via Capturing Indirect Dependencies and Behavioral Logic.** arxiv 2025. [paper](https://arxiv.org/abs/2502.05766) [pdf](Sentient_2025.pdf)
 
    *Wenhao Yan, Ning An, Wei Qiao, Weiheng Wu, Bo Jiang, Zhigang Lu, Baoxu Liu, Junrong Liu.*
 
-7. **HADES: Detecting Active Directory Attacks via Whole Network Provenance Analytics.** arxiv 2024. [paper](https://arxiv.org/abs/2407.18858) [pdf](HADES_2024.pdf)
+8. **HADES: Detecting Active Directory Attacks via Whole Network Provenance Analytics.** arxiv 2024. [paper](https://arxiv.org/abs/2407.18858) [pdf](HADES_2024.pdf)
 
    *Qi Liu, Kaibin Bao, Wajih Ul Hassan, Veit Hagenmeyer.*
+
+9. **LTRDetector: Exploring Long-Term Relationship for Advanced Persistent Threats Detection.** arxiv 2024. [paper](https://arxiv.org/abs/2404.02544) [pdf](LTRDetector_2024.pdf)
+
+   *Xiaoxiao Liu, Fan Xu, Nan Wang, Qinxin Zhao, Dalin Zhang, Xibin Zhao, Jiqiang Liu.*
+
+10. **Winemaking: Extracting Essential Insights for Efficient Threat Detection in Audit Logs.** arxiv 2024. [paper](https://arxiv.org/abs/2411.02252) [pdf](Winemaking_2024.pdf)
+
+    *Weiheng Wu, Wei Qiao, Wenhao Yan, Bo Jiang, Yuling Liu, Baoxu Liu, Zhigang Lu, JunRong Liu.*
 
 ### LLM-based Methods
 
@@ -71,17 +87,49 @@
 
    *Parth Atulbhai Gandhi, Prasanna N. Wudali, Yonatan Amaru, Yuval Elovici, Asaf Shabtai.*
 
+2. **OCR-APT: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs.** arxiv 2025. [paper](https://arxiv.org/abs/2510.12396) [pdf](OCR-APT_2025.pdf)
+
+   *Ahmed Aly, Essam Mansour, Amr Youssef.*
+
 ### Reinforcement Learning
 
 1. **Slot: Provenance-Driven APT Detection through Graph Reinforcement Learning.** arxiv 2024. [paper](https://arxiv.org/abs/2410.17910) [pdf](Slot_2024.pdf)
 
    *Wei Qiao, Yebo Feng, Teng Li, Zhuo Ma, Yulong Shen, JianFeng Ma, Yang Liu.*
 
+### Transformer-based
+
+1. **LogShield: A Transformer-based APT Detection System Leveraging Self-Attention.** arxiv 2023. [paper](https://arxiv.org/abs/2311.05447) [pdf](LogShield_2023.pdf)
+
+   *Sihat Afnan, Mushtari Sadia, Shahrear Iqbal, Anindya Iqbal.*
+
+### Few-Shot Learning
+
+1. **TREC: APT Tactic / Technique Recognition via Few-Shot Provenance Subgraph Learning.** arxiv 2024. [paper](https://arxiv.org/abs/2402.15266) [pdf](TREC_2024.pdf)
+
+   *Mingqi Lv, HongZhe Gao, Xuebo Qiu, Tieming Chen, Tiantian Zhu, Jinyin Chen, Shouling Ji.*
+
+## Attack Path & Tactic Recognition
+
+1. **TPPR: APT Tactic / Technique Pattern Guided Attack Path Reasoning for Attack Investigation.** arxiv 2025. [paper](https://arxiv.org/abs/2510.16172) [pdf](TPPR_2025.pdf)
+
+   *Authors TBD.*
+
 ## Graph Construction & Representation
 
 1. **Prov2vec: Learning Provenance Graph Representation for Unsupervised APT Detection.** arxiv 2023. [paper](https://arxiv.org/abs/2310.00668) [pdf](Prov2vec_2023.pdf)
 
    *Bibek Bhattarai, H. Howie Huang.*
+
+2. **PROVSYN: Synthesizing Provenance Graphs for Data Augmentation in Intrusion Detection Systems.** arxiv 2025. [paper](https://arxiv.org/abs/2506.05472) [pdf](PROVSYN_2025.pdf)
+
+   *Yi Huang, Wajih UI Hassan, Yao Guo, Xiangqun Chen, Ding Li.*
+
+## Lifelong Learning & Concept Drift
+
+1. **METANOIA: A Lifelong Intrusion Detection and Investigation System for Mitigating Concept Drift.** arxiv 2025. [paper](https://arxiv.org/abs/2412.21544) [pdf](METANOIA_2025.pdf)
+
+   *Jie Ying, Tiantian Zhu, Aohan Zheng, Tieming Chen, Mingqi Lv, Yan Chen.*
 
 ## Datasets
 
