@@ -71,17 +71,17 @@
 | 1 | **KAIROS**: Practical Intrusion Detection and Investigation using Whole-system Provenance | S&P'24 | [arxiv](https://arxiv.org/abs/2308.05034) · [pdf](KAIROS_2024.pdf) | 时序因果 GNN encoder-decoder |
 | 2 | **MAGIC**: Detecting APTs via Masked Graph Representation Learning | USENIX Sec'24 | [arxiv](https://arxiv.org/abs/2310.09831) · [pdf](MAGIC_2023.pdf) · [code](https://github.com/FDUDSDE/MAGIC) | 掩码图自编码器，自监督 |
 | 3 | **ORTHRUS**: Achieving High Quality of Attribution in Provenance-based IDS | USENIX Sec'25 | [paper](https://www.usenix.org/conference/usenixsecurity25/presentation/jiang-baoxiang) · [pdf](ORTHRUS_2025.pdf) · [code](https://github.com/ubc-provenance/orthrus) | 节点级高质量归因 |
-| 4 | **APT-MCL**: Adaptive APT Detection via Multi-View Collaborative Provenance Graph Learning | arXiv'26 | [arxiv](https://arxiv.org/abs/2501.07567) · [pdf](APT-MCL_2026.pdf) | 多视图协同学习 |
+| 4 | **APT-MCL**: Adaptive APT Detection via Multi-View Collaborative Provenance Graph Learning | arXiv'26 | [arxiv](https://arxiv.org/abs/2601.08328) · [pdf](APT-MCL_2026.pdf) | 多视图协同学习 |
 | 5 | **APT-CGLP**: APT Hunting via Contrastive Graph-Language Pre-Training | KDD'26 | [arxiv](https://arxiv.org/abs/2511.20290) · [pdf](APT-CGLP_2025.pdf) | 对比图-语言预训练 |
 | 6 | **NODLINK**: An Online System for Fine-Grained APT Attack Detection | NDSS'24 | [arxiv](https://arxiv.org/abs/2311.02331) · [pdf](NODLINK_2023.pdf) | 在线细粒度检测 |
-| 7 | **FLASH**: A Comprehensive Approach to Intrusion Detection via Provenance Graph Representation Learning | arXiv'24 | [arxiv](https://arxiv.org/abs/2407.13011) · [pdf](FLASH_2024.pdf) | 综合图表示学习 |
+| 7 | **FLASH**: A Comprehensive Approach to Intrusion Detection via Provenance Graph Representation Learning | arXiv'24 | [paper](https://ieeexplore.ieee.org/document/10646725/) · [pdf](FLASH_2024.pdf) | 综合图表示学习 |
 | 8 | **TFLAG**: Towards Practical APT Detection via Deviation-Aware Learning on Temporal Provenance Graph | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.06997) · [pdf](TFLAG_2025.pdf) | 时序偏差感知 |
-| 9 | **Sentient**: Detecting APTs Via Capturing Indirect Dependencies and Behavioral Logic | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.05766) · [pdf](Sentient_2025.pdf) | 间接依赖+行为逻辑 |
-| 10 | **GraphDART**: Graph Distillation for Efficient APT Detection | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.03252) · [pdf](GraphDART_2025.pdf) | 图蒸馏，效率优化 |
+| 9 | **Sentient**: Detecting APTs Via Capturing Indirect Dependencies and Behavioral Logic | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.06521) · [pdf](Sentient_2025.pdf) | 间接依赖+行为逻辑 |
+| 10 | **GraphDART**: Graph Distillation for Efficient APT Detection | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.02796) · [pdf](GraphDART_2025.pdf) | 图蒸馏，效率优化 |
 | 11 | **HADES**: Detecting Active Directory Attacks via Whole Network Provenance Analytics | arXiv'24 | [arxiv](https://arxiv.org/abs/2407.18858) · [pdf](HADES_2024.pdf) | AD 攻击全网分析 |
-| 12 | **LTRDetector**: Exploring Long-Term Relationship for APT Detection | arXiv'24 | [arxiv](https://arxiv.org/abs/2404.02544) · [pdf](LTRDetector_2024.pdf) | 长期关系建模 |
+| 12 | **LTRDetector**: Exploring Long-Term Relationship for APT Detection | arXiv'24 | [arxiv](https://arxiv.org/abs/2404.03162) · [pdf](LTRDetector_2024.pdf) | 长期关系建模 |
 | 13 | **P3GNN**: A Privacy-Preserving Provenance Graph-Based Model for APT Detection in SDN | arXiv'24 | [arxiv](https://arxiv.org/abs/2406.12003) · [pdf](P3GNN_2024.pdf) | 隐私保护联邦学习 |
-| 14 | **Winemaking**: Extracting Essential Insights for Efficient Threat Detection in Audit Logs | arXiv'24 | [arxiv](https://arxiv.org/abs/2411.02252) · [pdf](Winemaking_2024.pdf) | 审计日志精华提取 |
+| 14 | **Winemaking**: Extracting Essential Insights for Efficient Threat Detection in Audit Logs | arXiv'24 | [arxiv](https://arxiv.org/abs/2411.02775) · [pdf](Winemaking_2024.pdf) | 审计日志精华提取 |
 
 ### LLM-based Methods
 
@@ -89,7 +89,7 @@
 |---|-------|-------|-------|---------------|
 | 1 | **OMNISEC**: LLM-Driven Provenance-based IDS via Retrieval-Augmented Behavior Prompting | arXiv'25 | [arxiv](https://arxiv.org/abs/2503.03108) · [pdf](OMNISEC_2025.pdf) | LLM + RAG 异常判断 + 攻击图重建 |
 | 2 | **ProvSEEK**: LLM-driven Provenance Forensics for Threat Investigation | arXiv'25 | [arxiv](https://arxiv.org/abs/2508.21323) · [pdf](ProvSEEK_2025.pdf) | LLM Agent 迭代 CoT 取证 |
-| 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02588) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
+| 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02342) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
 | 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
 
 ### Reinforcement Learning
@@ -102,13 +102,13 @@
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **LogShield**: A Transformer-based APT Detection System Leveraging Self-Attention | arXiv'23 | [arxiv](https://arxiv.org/abs/2311.05447) · [pdf](LogShield_2023.pdf) | 自注意力序列建模 |
+| 1 | **LogShield**: A Transformer-based APT Detection System Leveraging Self-Attention | arXiv'23 | [arxiv](https://arxiv.org/abs/2311.05733) · [pdf](LogShield_2023.pdf) | 自注意力序列建模 |
 
 ### Few-Shot Learning
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **TREC**: APT Tactic/Technique Recognition via Few-Shot Provenance Subgraph Learning | arXiv'24 | [arxiv](https://arxiv.org/abs/2402.15266) · [pdf](TREC_2024.pdf) | 少样本战术识别 |
+| 1 | **TREC**: APT Tactic/Technique Recognition via Few-Shot Provenance Subgraph Learning | arXiv'24 | [arxiv](https://arxiv.org/abs/2402.15147) · [pdf](TREC_2024.pdf) | 少样本战术识别 |
 
 ---
 
@@ -116,7 +116,7 @@
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **TPPR**: APT Tactic/Technique Pattern Guided Attack Path Reasoning | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.16172) · [pdf](TPPR_2025.pdf) | ATT&CK 模式引导路径推理 |
+| 1 | **TPPR**: APT Tactic/Technique Pattern Guided Attack Path Reasoning | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.22191) · [pdf](TPPR_2025.pdf) | ATT&CK 模式引导路径推理 |
 
 ---
 
@@ -124,8 +124,8 @@
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **Prov2vec**: Learning Provenance Graph Representation for Unsupervised APT Detection | arXiv'23 | [arxiv](https://arxiv.org/abs/2310.00668) · [pdf](Prov2vec_2023.pdf) | 无监督图嵌入 |
-| 2 | **PROVSYN**: Synthesizing Provenance Graphs for Data Augmentation in IDS | arXiv'25 | [arxiv](https://arxiv.org/abs/2506.05472) · [pdf](PROVSYN_2025.pdf) | 溯源图合成增强 |
+| 1 | **Prov2vec**: Learning Provenance Graph Representation for Unsupervised APT Detection | arXiv'23 | [arxiv](https://arxiv.org/abs/2310.00843) · [pdf](Prov2vec_2023.pdf) | 无监督图嵌入 |
+| 2 | **PROVSYN**: Synthesizing Provenance Graphs for Data Augmentation in IDS | arXiv'25 | [arxiv](https://arxiv.org/abs/2506.06226) · [pdf](PROVSYN_2025.pdf) | 溯源图合成增强 |
 
 ---
 
@@ -133,7 +133,7 @@
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **METANOIA**: A Lifelong IDS for Mitigating Concept Drift | arXiv'25 | [arxiv](https://arxiv.org/abs/2412.21544) · [pdf](METANOIA_2025.pdf) | 终身学习适应环境变化 |
+| 1 | **METANOIA**: A Lifelong IDS for Mitigating Concept Drift | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.00438) · [pdf](METANOIA_2025.pdf) | 终身学习适应环境变化 |
 
 ---
 
