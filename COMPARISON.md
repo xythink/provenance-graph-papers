@@ -6,17 +6,23 @@
 
 | 论文 | 年份 | 方法类型 | 核心技术 | 数据集 | 主要指标 |
 |------|------|----------|----------|--------|----------|
+| **APT-CGLP** | 2026 | GNN+LLM | 对比图-语言预训练 | DARPA TC | KDD'26 |
 | **APT-MCL** | 2026 | GNN | 多视图协同学习 | DARPA TC | F1: ~0.95 |
 | **Sentient** | 2025 | GNN | 间接依赖+行为逻辑 | DARPA TC, StreamSpot | - |
 | **TFLAG** | 2025 | GNN | 时序偏差感知学习 | DARPA TC | F1: 0.94+ |
 | **SHIELD** | 2025 | LLM | GPT检测+解释 | DARPA TC | 可解释性强 |
+| **OMNISEC** | 2025 | LLM+RAG | 异常节点+RAG行为提示 | DARPA TC | LLM驱动检测 |
+| **ProvSEEK** | 2025 | LLM Agent | 迭代CoT溯源取证 | DARPA TC | 可扩展取证 |
+| **ORTHRUS** | 2025 | GNN | 节点级高质量归因 | DARPA TC | USENIX Sec'25 |
 | **OCR-APT** | 2025 | LLM+GNN | 子图异常+LLM重建 | DARPA TC | 攻击故事重建 |
 | **PROVSYN** | 2025 | 数据增强 | 溯源图合成 | 合成数据 | 解决数据稀缺 |
 | **METANOIA** | 2025 | 终身学习 | 概念漂移缓解 | DARPA TC | 长期稳定性 |
 | **GraphDART** | 2025 | GNN | 图蒸馏 | DARPA TC | 效率优化 |
 | **TPPR** | 2025 | 路径推理 | ATT&CK模式引导 | DARPA TC | 战术识别 |
 | **Slot** | 2024 | RL | 图强化学习 | DARPA TC | 自适应检测 |
-| **MAGIC** | 2024 | GNN | 掩码图表示学习 | DARPA TC, StreamSpot | F1: 0.96 |
+| **KAIROS** | 2024 | GNN | 全系统溯源图时序因果 | DARPA TC | S&P'24 |
+| **MAGIC** | 2024 | GNN | 掩码图表示学习 | DARPA TC, StreamSpot | USENIX Sec'24 |
+| **FLASH** | 2024 | GNN | 综合图表示学习 | DARPA TC | 全面方法 |
 | **NODLINK** | 2024 | GNN | 在线细粒度检测 | DARPA TC | 实时性强 |
 | **HADES** | 2024 | GNN | AD攻击检测 | 企业网络 | 全网分析 |
 | **P3GNN** | 2024 | GNN | 隐私保护 | SDN环境 | 联邦学习 |
@@ -44,8 +50,11 @@
 
 | 论文 | 特点 | 优势 |
 |------|------|------|
+| OMNISEC | LLM+RAG行为提示 | 异常判断+攻击图重建 |
+| ProvSEEK | LLM Agent迭代取证 | 可扩展，CoT推理 |
 | SHIELD | GPT检测 | 可解释性 |
 | OCR-APT | 攻击故事重建 | 人类可读报告 |
+| APT-CGLP | 对比图-语言预训练 | GNN+LLM融合，KDD'26 |
 
 ### Reinforcement Learning (RL)
 通过强化学习自适应检测策略。
@@ -67,25 +76,25 @@
 
 | 数据集 | 使用论文数 | 特点 |
 |--------|-----------|------|
-| DARPA TC (Trace/Theia/Cadets/FiveDirections) | 17/19 | 最主流，含真实APT攻击 |
-| StreamSpot | 3/19 | 流式图检测 |
-| Unicorn | 2/19 | 企业环境 |
+| DARPA TC (Trace/Theia/Cadets/FiveDirections) | 23/26 | 最主流，含真实APT攻击 |
+| StreamSpot | 3/26 | 流式图检测 |
+| Unicorn | 2/26 | 企业环境 |
 
 ## 🚀 技术趋势
 
 1. **2023**: 基础GNN方法 (MAGIC, NODLINK)
-2. **2024**: 多样化探索 (RL, Few-shot, 隐私保护)
-3. **2025**: LLM融合 + 工程优化 (可解释性、效率、概念漂移)
-4. **2026**: 多视图协同 (APT-MCL)
+2. **2024**: 多样化探索 (RL, Few-shot, 隐私保护) + 顶会突破 (KAIROS@S&P, MAGIC@USENIX)
+3. **2025**: LLM大爆发 (OMNISEC, ProvSEEK, SHIELD, OCR-APT) + SoK综述 + 节点级归因 (ORTHRUS)
+4. **2026**: 多视图协同 (APT-MCL) + 图-语言预训练 (APT-CGLP@KDD)
 
 ## 📎 开源代码
 
 | 论文 | 代码链接 |
 |------|----------|
-| MAGIC | [GitHub](https://github.com/xxx) |
-| NODLINK | [GitHub](https://github.com/xxx) |
-| ... | (待补充) |
+| MAGIC | [GitHub](https://github.com/FDUDSDE/MAGIC) |
+| ORTHRUS | [GitHub](https://github.com/ubc-provenance/orthrus) |
+| NODLINK | (待补充) |
 
 ---
 
-*最后更新: 2026-02-01*
+*最后更新: 2026-02-13*

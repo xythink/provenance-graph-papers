@@ -4,8 +4,8 @@
     <b>终端溯源图与APT检测相关论文集合</b>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/papers-19-blue" alt="papers">
-    <img src="https://img.shields.io/badge/last%20update-2026--02-green" alt="update">
+    <img src="https://img.shields.io/badge/papers-26-blue" alt="papers">
+    <img src="https://img.shields.io/badge/last%20update-2026--02--13-green" alt="update">
     <img src="https://img.shields.io/badge/maintained%20by-Clawdbot-orange" alt="clawdbot">
   </p>
   <p>
@@ -35,9 +35,9 @@
 
 ## Survey
 
-> 综述类论文
+1. **Sometimes Simpler is Better: A Comprehensive Analysis of State-of-the-Art Provenance-based Intrusion Detection Systems.** USENIX Security 2025. [paper](https://www.usenix.org/conference/usenixsecurity25/presentation/bilot) [pdf](Bilot_SoK_2025.pdf)
 
-*Coming soon...*
+   *Tristan Bilot, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Baoxiang Jiang, Shahrear Iqbal, Xueyuan Han, Thomas Pasquier.*
 
 ## APT Detection
 
@@ -83,6 +83,22 @@
 
     *Weiheng Wu, Wei Qiao, Wenhao Yan, Bo Jiang, Yuling Liu, Baoxu Liu, Zhigang Lu, JunRong Liu.*
 
+11. **KAIROS: Practical Intrusion Detection and Investigation using Whole-system Provenance.** IEEE S&P 2024. [paper](https://arxiv.org/abs/2308.05034) [pdf](KAIROS_2024.pdf)
+
+    *Zijun Cheng, Qiujian Lv, Jinyuan Liang, Yan Wang, Degang Sun, Thomas Pasquier, Xueyuan Han.*
+
+12. **ORTHRUS: Achieving High Quality of Attribution in Provenance-based Intrusion Detection Systems.** USENIX Security 2025. [paper](https://www.usenix.org/conference/usenixsecurity25/presentation/jiang-baoxiang) [pdf](ORTHRUS_2025.pdf) [code](https://github.com/ubc-provenance/orthrus)
+
+    *Baoxiang Jiang, Tristan Bilot, Nour El Madhoun, Khaldoun Al Agha, Anis Zouaoui, Shahrear Iqbal, Xueyuan Han, Thomas Pasquier.*
+
+13. **FLASH: A Comprehensive Approach to Intrusion Detection via Provenance Graph Representation Learning.** arxiv 2024. [paper](https://arxiv.org/abs/2407.13011) [pdf](FLASH_2024.pdf)
+
+    *Mian Ul Haq Rehman, Hani Alshahrani, Daeyoung Kim.*
+
+14. **APT-CGLP: Advanced Persistent Threat Hunting via Contrastive Graph-Language Pre-Training.** KDD 2026. [paper](https://arxiv.org/abs/2511.20290) [pdf](APT-CGLP_2025.pdf)
+
+    *Authors TBD.*
+
 ### LLM-based Methods
 
 1. **SHIELD: APT Detection and Intelligent Explanation Using LLM.** arxiv 2025. [paper](https://arxiv.org/abs/2502.02588) [pdf](SHIELD_2025.pdf)
@@ -92,6 +108,14 @@
 2. **OCR-APT: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs.** arxiv 2025. [paper](https://arxiv.org/abs/2510.12396) [pdf](OCR-APT_2025.pdf)
 
    *Ahmed Aly, Essam Mansour, Amr Youssef.*
+
+3. **OMNISEC: LLM-Driven Provenance-based Intrusion Detection via Retrieval-Augmented Behavior Prompting.** arxiv 2025. [paper](https://arxiv.org/abs/2503.03108) [pdf](OMNISEC_2025.pdf)
+
+   *Cheng Wenrui et al.*
+
+4. **ProvSEEK: LLM-driven Provenance Forensics for Threat Investigation and Detection.** arxiv 2025. [paper](https://arxiv.org/abs/2508.21323) [pdf](ProvSEEK_2025.pdf)
+
+   *Kunal Mukherjee, Murat Kantarcioglu.*
 
 ### Reinforcement Learning
 
