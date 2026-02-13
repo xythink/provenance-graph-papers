@@ -90,7 +90,7 @@
 | 1 | **OMNISEC**: LLM-Driven Provenance-based IDS via Retrieval-Augmented Behavior Prompting | arXiv'25 | [arxiv](https://arxiv.org/abs/2503.03108) · [pdf](OMNISEC_2025.pdf) | LLM + RAG 异常判断 + 攻击图重建 |
 | 2 | **ProvSEEK**: LLM-driven Provenance Forensics for Threat Investigation | arXiv'25 | [arxiv](https://arxiv.org/abs/2508.21323) · [pdf](ProvSEEK_2025.pdf) | LLM Agent 迭代 CoT 取证 |
 | 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02588) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
-| 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.12396) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
+| 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
 
 ### Reinforcement Learning
 
