@@ -4,8 +4,8 @@
     <b>A curated collection of provenance graph & APT detection papers</b>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/papers-26-blue" alt="papers">
-    <img src="https://img.shields.io/badge/last%20update-2026--02--13-green" alt="update">
+    <img src="https://img.shields.io/badge/papers-32-blue" alt="papers">
+    <img src="https://img.shields.io/badge/last%20update-2026--03--30-green" alt="update">
     <img src="https://img.shields.io/badge/maintained%20by-OpenClaw-orange" alt="openclaw">
     <img src="https://img.shields.io/github/stars/xythink/provenance-graph-papers?style=social" alt="stars">
   </p>
@@ -29,6 +29,7 @@
   - [Reinforcement Learning](#reinforcement-learning)
   - [Transformer-based](#transformer-based)
   - [Few-Shot Learning](#few-shot-learning)
+  - [Rule-based / Adaptive](#rule-based--adaptive)
 - [Attack Path & Tactic Recognition](#attack-path--tactic-recognition)
 - [Graph Construction & Representation](#graph-construction--representation)
 - [Lifelong Learning & Concept Drift](#lifelong-learning--concept-drift)
@@ -40,17 +41,17 @@
 ## 📈 Research Trends
 
 ```
-2023  ██████░░░░░░░░░░  4 papers   基础 GNN (MAGIC, NODLINK, Prov2vec, LogShield)
-2024  ██████████░░░░░░  8 papers   多样化 (RL, Few-shot, 隐私保护, 顶会 KAIROS@S&P)
-2025  ████████████████ 12 papers   LLM 爆发 (OMNISEC, ProvSEEK, SHIELD) + SoK 综述
-2026  ████░░░░░░░░░░░░  2 papers   图-语言预训练 (APT-CGLP@KDD, APT-MCL)
+2023  ████░░░░░░░░░░░░  4 papers   基础 GNN (MAGIC, NODLINK, Prov2vec, LogShield)
+2024  ██████░░░░░░░░░░  8 papers   多样化 (RL, Few-shot, 隐私保护, 顶会 KAIROS@S&P)
+2025  ████████████████ 17 papers   LLM 爆发 + 顶会丰收 (Slot@CCS, OCR-APT@CCS, CAPTAIN@NDSS)
+2026  ██████░░░░░░░░░░  3 papers   图-语言预训练 (APT-CGLP@KDD) + LLM 语义 (Semantic-Aware)
 ```
 
 **Key observations:**
-- 🔥 **2025 是 LLM+溯源图元年** — OMNISEC, ProvSEEK, SHIELD, OCR-APT 四篇 LLM 方法同年出现
-- 📊 **DARPA TC 仍是主流 benchmark** — 23/26 篇论文使用
-- 🏆 **顶会认可度上升** — KAIROS (S&P'24), MAGIC (USENIX Sec'24), ORTHRUS (USENIX Sec'25), APT-CGLP (KDD'26)
-- 📝 **首个全面 SoK** — Bilot et al. (USENIX Sec'25) 系统化对比了所有主流 PIDS
+- 🔥 **2025 是 LLM+溯源图元年** — OMNISEC, ProvSEEK, SHIELD, OCR-APT, APT-LLM 五篇 LLM 方法同年出现
+- 📊 **DARPA TC 仍是主流 benchmark** — 28/32 篇论文使用
+- 🏆 **顶会认可度持续上升** — KAIROS (S&P'24), MAGIC (USENIX Sec'24), CAPTAIN (NDSS'25), Slot & OCR-APT (CCS'25), ORTHRUS (USENIX Sec'25), APT-CGLP (KDD'26)
+- 📝 **首个全面 SoK + 统一框架** — Bilot et al. SoK (USENIX Sec'25) + PIDSMaker 开源框架
 
 ---
 
@@ -82,6 +83,7 @@
 | 12 | **LTRDetector**: Exploring Long-Term Relationship for APT Detection | arXiv'24 | [arxiv](https://arxiv.org/abs/2404.03162) · [pdf](LTRDetector_2024.pdf) | 长期关系建模 |
 | 13 | **P3GNN**: A Privacy-Preserving Provenance Graph-Based Model for APT Detection in SDN | arXiv'24 | [arxiv](https://arxiv.org/abs/2406.12003) · [pdf](P3GNN_2024.pdf) | 隐私保护联邦学习 |
 | 14 | **Winemaking**: Extracting Essential Insights for Efficient Threat Detection in Audit Logs | arXiv'24 | [arxiv](https://arxiv.org/abs/2411.02775) · [pdf](Winemaking_2024.pdf) | 审计日志精华提取 |
+| 15 | **CONTINUUM**: Detecting APT Attacks through Spatial-Temporal Graph Neural Networks | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.02981) | 时空 GNN 自编码器 + 联邦学习 |
 
 ### LLM-based Methods
 
@@ -90,13 +92,16 @@
 | 1 | **OMNISEC**: LLM-Driven Provenance-based IDS via Retrieval-Augmented Behavior Prompting | arXiv'25 | [arxiv](https://arxiv.org/abs/2503.03108) · [pdf](OMNISEC_2025.pdf) | LLM + RAG 异常判断 + 攻击图重建 |
 | 2 | **ProvSEEK**: LLM-driven Provenance Forensics for Threat Investigation | arXiv'25 | [arxiv](https://arxiv.org/abs/2508.21323) · [pdf](ProvSEEK_2025.pdf) | LLM Agent 迭代 CoT 取证 |
 | 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02342) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
-| 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
+| 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | CCS'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
+| 5 | **APT-LLM**: Embedding-Based Anomaly Detection of Cyber APTs Using Large Language Models | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.09385) | LLM 嵌入 + 自编码器异常检测 |
+| 6 | **Knowledge Transfer from LLMs to Provenance Analysis**: A Semantic-Augmented Method for APT Detection | arXiv'25 | [arxiv](https://arxiv.org/abs/2503.18316) | LLM 知识迁移到溯源图分析 |
+| 7 | **Semantic-Aware APT Detection** Using Autoencoders on LLM-Encoded System Logs | arXiv'26 | [arxiv](https://arxiv.org/abs/2602.00204) | LLM 编码日志 + 自编码器 |
 
 ### Reinforcement Learning
 
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
-| 1 | **Slot**: Provenance-Driven APT Detection through Graph Reinforcement Learning | arXiv'24 | [arxiv](https://arxiv.org/abs/2410.17910) · [pdf](Slot_2024.pdf) | 图强化学习自适应检测 |
+| 1 | **Slot**: Provenance-Driven APT Detection through Graph Reinforcement Learning | CCS'25 | [arxiv](https://arxiv.org/abs/2410.17910) · [pdf](Slot_2024.pdf) | 图强化学习自适应检测 |
 
 ### Transformer-based
 
@@ -109,6 +114,12 @@
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
 | 1 | **TREC**: APT Tactic/Technique Recognition via Few-Shot Provenance Subgraph Learning | arXiv'24 | [arxiv](https://arxiv.org/abs/2402.15147) · [pdf](TREC_2024.pdf) | 少样本战术识别 |
+
+### Rule-based / Adaptive
+
+| # | Paper | Venue | Links | Key Technique |
+|---|-------|-------|-------|---------------|
+| 1 | **CAPTAIN**: Incorporating Gradients to Rules for Lightweight, Adaptive Provenance-based Intrusion Detection | NDSS'25 | [arxiv](https://arxiv.org/abs/2404.14720) · [code](https://github.com/LexusWang/CAPTAIN) | 梯度优化规则，自适应轻量 PIDS |
 
 ---
 
@@ -141,9 +152,15 @@
 
 | Dataset | Description | Source | Used by |
 |---------|-------------|--------|---------|
-| **DARPA TC** | Transparent Computing — 最主流的 APT 检测 benchmark (Trace/Theia/Cadets/FiveDirections) | [GitHub](https://github.com/darpa-i2o/Transparent-Computing) | 23/26 papers |
-| **StreamSpot** | 流式异构信息流图 | [paper](https://dl.acm.org/doi/10.1145/2939672.2939716) | 3/26 papers |
-| **Unicorn** | 企业级端点数据集 | [paper](https://dl.acm.org/doi/10.1145/3319535.3363214) | 2/26 papers |
+| **DARPA TC** | Transparent Computing — 最主流的 APT 检测 benchmark (Trace/Theia/Cadets/FiveDirections) | [GitHub](https://github.com/darpa-i2o/Transparent-Computing) | 28/32 papers |
+| **StreamSpot** | 流式异构信息流图 | [paper](https://dl.acm.org/doi/10.1145/2939672.2939716) | 3/32 papers |
+| **Unicorn** | 企业级端点数据集 | [paper](https://dl.acm.org/doi/10.1145/3319535.3363214) | 2/32 papers |
+
+### Frameworks & Tools
+
+| Paper | Venue | Links | Description |
+|-------|-------|-------|-------------|
+| **PIDSMaker**: Building and Evaluating Provenance-based Intrusion Detection Systems | USENIX Sec'25 | [arxiv](https://arxiv.org/abs/2601.22983) · [code](https://github.com/ubc-provenance/PIDSMaker) | 开源 PIDS 统一评估框架，集成 8 个系统 |
 
 ---
 
@@ -153,6 +170,8 @@
 |-------|------|-------|
 | MAGIC | [FDUDSDE/MAGIC](https://github.com/FDUDSDE/MAGIC) | ![](https://img.shields.io/github/stars/FDUDSDE/MAGIC?style=social) |
 | ORTHRUS | [ubc-provenance/orthrus](https://github.com/ubc-provenance/orthrus) | ![](https://img.shields.io/github/stars/ubc-provenance/orthrus?style=social) |
+| PIDSMaker | [ubc-provenance/PIDSMaker](https://github.com/ubc-provenance/PIDSMaker) | ![](https://img.shields.io/github/stars/ubc-provenance/PIDSMaker?style=social) |
+| CAPTAIN | [LexusWang/CAPTAIN](https://github.com/LexusWang/CAPTAIN) | ![](https://img.shields.io/github/stars/LexusWang/CAPTAIN?style=social) |
 | DARPA TC | [darpa-i2o/Transparent-Computing](https://github.com/darpa-i2o/Transparent-Computing) | ![](https://img.shields.io/github/stars/darpa-i2o/Transparent-Computing?style=social) |
 
 > 📢 如果你知道其他论文的开源代码，欢迎 PR 补充！
