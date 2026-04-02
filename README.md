@@ -4,8 +4,8 @@
     <b>A curated collection of provenance graph & APT detection papers</b>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/papers-26-blue" alt="papers">
-    <img src="https://img.shields.io/badge/last%20update-2026--02--13-green" alt="update">
+    <img src="https://img.shields.io/badge/papers-32-blue" alt="papers">
+    <img src="https://img.shields.io/badge/last%20update-2026--04--03-green" alt="update">
     <img src="https://img.shields.io/badge/maintained%20by-OpenClaw-orange" alt="openclaw">
     <img src="https://img.shields.io/github/stars/xythink/provenance-graph-papers?style=social" alt="stars">
   </p>
@@ -30,7 +30,9 @@
   - [Transformer-based](#transformer-based)
   - [Few-Shot Learning](#few-shot-learning)
 - [Attack Path & Tactic Recognition](#attack-path--tactic-recognition)
+- [Threat Hunting](#threat-hunting)
 - [Graph Construction & Representation](#graph-construction--representation)
+- [Provenance Systems & EDR Integration](#provenance-systems--edr-integration)
 - [Lifelong Learning & Concept Drift](#lifelong-learning--concept-drift)
 - [Datasets & Benchmarks](#datasets--benchmarks)
 - [Open Source Code](#open-source-code)
@@ -43,14 +45,16 @@
 2023  ██████░░░░░░░░░░  4 papers   基础 GNN (MAGIC, NODLINK, Prov2vec, LogShield)
 2024  ██████████░░░░░░  8 papers   多样化 (RL, Few-shot, 隐私保护, 顶会 KAIROS@S&P)
 2025  ████████████████ 12 papers   LLM 爆发 (OMNISEC, ProvSEEK, SHIELD) + SoK 综述
-2026  ████░░░░░░░░░░░░  2 papers   图-语言预训练 (APT-CGLP@KDD, APT-MCL)
+2026  ████████████░░░░  8 papers   工程落地 + LLM 深化 (PRISM workshop, Auto-Prov, ProHunter)
 ```
 
 **Key observations:**
 - 🔥 **2025 是 LLM+溯源图元年** — OMNISEC, ProvSEEK, SHIELD, OCR-APT 四篇 LLM 方法同年出现
-- 📊 **DARPA TC 仍是主流 benchmark** — 23/26 篇论文使用
+- 📊 **DARPA TC 仍是主流 benchmark** — 28/32 篇论文使用
 - 🏆 **顶会认可度上升** — KAIROS (S&P'24), MAGIC (USENIX Sec'24), ORTHRUS (USENIX Sec'25), APT-CGLP (KDD'26)
 - 📝 **首个全面 SoK** — Bilot et al. (USENIX Sec'25) 系统化对比了所有主流 PIDS
+- 🏭 **2026 转向工程落地** — SYSARMOR 首次将溯源分析集成到企业 EDR；PRISM@NDSS 成为专属 workshop
+- 🧠 **LLM 从检测扩展到图构建** — Auto-Prov 用 LLM 自动从异构日志构建溯源图，不再限于检测环节
 
 ---
 
@@ -82,6 +86,7 @@
 | 12 | **LTRDetector**: Exploring Long-Term Relationship for APT Detection | arXiv'24 | [arxiv](https://arxiv.org/abs/2404.03162) · [pdf](LTRDetector_2024.pdf) | 长期关系建模 |
 | 13 | **P3GNN**: A Privacy-Preserving Provenance Graph-Based Model for APT Detection in SDN | arXiv'24 | [arxiv](https://arxiv.org/abs/2406.12003) · [pdf](P3GNN_2024.pdf) | 隐私保护联邦学习 |
 | 14 | **Winemaking**: Extracting Essential Insights for Efficient Threat Detection in Audit Logs | arXiv'24 | [arxiv](https://arxiv.org/abs/2411.02775) · [pdf](Winemaking_2024.pdf) | 审计日志精华提取 |
+| 15 | **APT-LMSPS**: An Efficient APT Detection System via Long-Range Meta-Path Progressive Sampling Search | Information'26 | [paper](https://www.mdpi.com/2078-2489/17/3/245) | 异构图元路径渐进采样 |
 
 ### LLM-based Methods
 
@@ -91,6 +96,7 @@
 | 2 | **ProvSEEK**: LLM-driven Provenance Forensics for Threat Investigation | arXiv'25 | [arxiv](https://arxiv.org/abs/2508.21323) · [pdf](ProvSEEK_2025.pdf) | LLM Agent 迭代 CoT 取证 |
 | 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02342) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
 | 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
+| 5 | **Auto-Prov**: An End-to-End Framework for Functionality-Embedded Provenance Graph Construction and Threat Interpretation | arXiv'26 | [arxiv](https://arxiv.org/abs/2603.17100) · [pdf](Auto-Prov_2026.pdf) | LLM 自动构图 + 功能嵌入 + 攻击摘要 |
 
 ### Reinforcement Learning
 
@@ -117,6 +123,15 @@
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
 | 1 | **TPPR**: APT Tactic/Technique Pattern Guided Attack Path Reasoning | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.22191) · [pdf](TPPR_2025.pdf) | ATT&CK 模式引导路径推理 |
+| 2 | **StageFinder**: Learning the APT Kill Chain — Temporal Reasoning over Provenance Data for Attack Stage Estimation | arXiv'26 | [arxiv](https://arxiv.org/abs/2603.07560) · [pdf](StageFinder_2026.pdf) | GNN+LSTM 时序 Kill Chain 阶段推断 (F1=0.96) |
+
+---
+
+## Threat Hunting
+
+| # | Paper | Venue | Links | Key Technique |
+|---|-------|-------|-------|---------------|
+| 1 | **ProHunter**: A Comprehensive APT Hunting System Based on Whole-System Provenance | arXiv'26 | [arxiv](https://arxiv.org/abs/2603.19658) · [pdf](ProHunter_2026.pdf) · [code](https://github.com/xueboQiu/ProHunter) | CTI 查询图匹配 + 语义压缩 + 跨平台设计 |
 
 ---
 
@@ -126,6 +141,14 @@
 |---|-------|-------|-------|---------------|
 | 1 | **Prov2vec**: Learning Provenance Graph Representation for Unsupervised APT Detection | arXiv'23 | [arxiv](https://arxiv.org/abs/2310.00843) · [pdf](Prov2vec_2023.pdf) | 无监督图嵌入 |
 | 2 | **PROVSYN**: Synthesizing Provenance Graphs for Data Augmentation in IDS | arXiv'25 | [arxiv](https://arxiv.org/abs/2506.06226) · [pdf](PROVSYN_2025.pdf) | 溯源图合成增强 |
+
+---
+
+## Provenance Systems & EDR Integration
+
+| # | Paper | Venue | Links | Key Technique |
+|---|-------|-------|-------|---------------|
+| 1 | **SYSARMOR**: The Practice of Integrating Provenance Analysis into EDR Systems | PRISM@NDSS'26 | [pdf](SYSARMOR_PRISM2026.pdf) | 微服务架构 EDR + NODLINK/KNOWHOW 异步检测 |
 
 ---
 
@@ -141,9 +164,12 @@
 
 | Dataset | Description | Source | Used by |
 |---------|-------------|--------|---------|
-| **DARPA TC** | Transparent Computing — 最主流的 APT 检测 benchmark (Trace/Theia/Cadets/FiveDirections) | [GitHub](https://github.com/darpa-i2o/Transparent-Computing) | 23/26 papers |
-| **StreamSpot** | 流式异构信息流图 | [paper](https://dl.acm.org/doi/10.1145/2939672.2939716) | 3/26 papers |
-| **Unicorn** | 企业级端点数据集 | [paper](https://dl.acm.org/doi/10.1145/3319535.3363214) | 2/26 papers |
+| **DARPA TC** | Transparent Computing — 最主流的 APT 检测 benchmark (Trace/Theia/Cadets/FiveDirections) | [GitHub](https://github.com/darpa-i2o/Transparent-Computing) | 28/32 papers |
+| **DARPA OpTC** | 操作级透明计算数据集，StageFinder/ProHunter 使用 | [GitHub](https://github.com/FiveDirections/OpTC-data) | 3/32 papers |
+| **StreamSpot** | 流式异构信息流图 | [paper](https://dl.acm.org/doi/10.1145/2939672.2939716) | 3/32 papers |
+| **Unicorn** | 企业级端点数据集 | [paper](https://dl.acm.org/doi/10.1145/3319535.3363214) | 2/32 papers |
+
+**🆕 New:** [Building Next-Generation Datasets for Provenance-Based Intrusion Detection](NextGenDatasets_PRISM2026.pdf) (PRISM@NDSS'26) — 提出下一代溯源数据集的设计原则与构建方法
 
 ---
 
@@ -153,6 +179,7 @@
 |-------|------|-------|
 | MAGIC | [FDUDSDE/MAGIC](https://github.com/FDUDSDE/MAGIC) | ![](https://img.shields.io/github/stars/FDUDSDE/MAGIC?style=social) |
 | ORTHRUS | [ubc-provenance/orthrus](https://github.com/ubc-provenance/orthrus) | ![](https://img.shields.io/github/stars/ubc-provenance/orthrus?style=social) |
+| ProHunter | [xueboQiu/ProHunter](https://github.com/xueboQiu/ProHunter) | ![](https://img.shields.io/github/stars/xueboQiu/ProHunter?style=social) |
 | DARPA TC | [darpa-i2o/Transparent-Computing](https://github.com/darpa-i2o/Transparent-Computing) | ![](https://img.shields.io/github/stars/darpa-i2o/Transparent-Computing?style=social) |
 
 > 📢 如果你知道其他论文的开源代码，欢迎 PR 补充！
