@@ -4,7 +4,7 @@
     <b>A curated collection of provenance graph & APT detection papers</b>
   </p>
   <p>
-    <img src="https://img.shields.io/badge/papers-38-blue" alt="papers">
+    <img src="https://img.shields.io/badge/papers-34-blue" alt="papers">
     <img src="https://img.shields.io/badge/last%20update-2026--04--11-green" alt="update">
     <img src="https://img.shields.io/badge/maintained%20by-OpenClaw-orange" alt="openclaw">
     <img src="https://img.shields.io/github/stars/xythink/provenance-graph-papers?style=social" alt="stars">
@@ -32,8 +32,6 @@
 - [Attack Path & Tactic Recognition](#attack-path--tactic-recognition)
 - [Threat Hunting](#threat-hunting)
 - [Graph Construction & Representation](#graph-construction--representation)
-- [Robustness & Adversarial](#robustness--adversarial)
-- [Evaluation Frameworks & Industrial Practice](#evaluation-frameworks--industrial-practice)
 - [Provenance Systems & EDR Integration](#provenance-systems--edr-integration)
 - [Lifelong Learning & Concept Drift](#lifelong-learning--concept-drift)
 - [Datasets & Benchmarks](#datasets--benchmarks)
@@ -46,19 +44,18 @@
 ```
 2023  ██████░░░░░░░░░░  4 papers   基础 GNN (MAGIC, NODLINK, Prov2vec, LogShield)
 2024  ██████████░░░░░░  8 papers   多样化 (RL, Few-shot, 隐私保护, 顶会 KAIROS@S&P)
-2025  ████████████████ 14 papers   LLM 爆发 + 鲁棒性 + 供应链 (MirGuard, DistTempGraph)
-2026  ████████████░░░░ 12 papers   工程落地 + 评估体系 (PIDSMaker, Tidal, 工业场景评估)
+2025  ████████████████ 13 papers   LLM 爆发 (OMNISEC, ProvSEEK, SHIELD) + 供应链 + SoK 综述
+2026  ████████████░░░░  8 papers   工程落地 + LLM 深化 (PRISM workshop, Auto-Prov, ProHunter)
 ```
 
 **Key observations:**
 - 🔥 **2025 是 LLM+溯源图元年** — OMNISEC, ProvSEEK, SHIELD, OCR-APT 四篇 LLM 方法同年出现
-- 📊 **DARPA TC 仍是主流 benchmark** — 但工业场景评估揭示了与真实环境的差距
+- 📊 **DARPA TC 仍是主流 benchmark** — 30+ 篇论文使用
 - 🏆 **顶会认可度上升** — KAIROS (S&P'24), MAGIC (USENIX Sec'24), ORTHRUS (USENIX Sec'25), APT-CGLP (KDD'26), Slot (CCS'25)
 - 📝 **首个全面 SoK** — Bilot et al. (USENIX Sec'25) 系统化对比了所有主流 PIDS
-- 🏭 **2026 转向工程落地与评估** — PIDSMaker 统一评估框架；工业场景首次系统评估 PIDS；SYSARMOR 集成 EDR
+- 🏭 **2026 转向工程落地** — SYSARMOR 首次将溯源分析集成到企业 EDR；PRISM@NDSS 成为专属 workshop
 - 🧠 **LLM 从检测扩展到图构建** — Auto-Prov 用 LLM 自动从异构日志构建溯源图，不再限于检测环节
-- 🛡️ **鲁棒性成为新焦点** — MirGuard 首次系统性解决图操纵对抗攻击；Tidal 处理概念漂移
-- 🔗 **供应链场景兴起** — 分布式时序图学习首次应用于供应链 APT 检测
+- 🔗 **供应链场景兴起** — DistTempGraph (ICDCS'25) 首次将分布式时序图学习应用于供应链 APT 检测
 
 ---
 
@@ -92,7 +89,6 @@
 | 14 | **Winemaking**: Extracting Essential Insights for Efficient Threat Detection in Audit Logs | arXiv'24 | [arxiv](https://arxiv.org/abs/2411.02775) · [pdf](Winemaking_2024.pdf) | 审计日志精华提取 |
 | 15 | **APT-LMSPS**: An Efficient APT Detection System via Long-Range Meta-Path Progressive Sampling Search | Information'26 | [paper](https://www.mdpi.com/2078-2489/17/3/245) | 异构图元路径渐进采样 |
 | 16 | **DistTempGraph**: Distributed Temporal Graph Learning with Provenance for APT Detection in Supply Chains | ICDCS'25 | [arxiv](https://arxiv.org/abs/2504.02313) · [pdf](DistTempGraph_2025.pdf) | 分布式时序图学习，供应链 APT 检测 |
-| 17 | **TRAP**: Provenance-Based Intrusion Detection via Multi-scale Graph Representation Learning | Springer'26 | [paper](https://dl.acm.org/doi/10.1007/978-981-95-3543-9_29) | 多尺度图表示学习优化检测 |
 
 ### LLM-based Methods
 
@@ -103,7 +99,7 @@
 | 3 | **SHIELD**: APT Detection and Intelligent Explanation Using LLM | arXiv'25 | [arxiv](https://arxiv.org/abs/2502.02342) · [pdf](SHIELD_2025.pdf) | GPT 检测 + 可解释性 |
 | 4 | **OCR-APT**: Reconstructing APT Stories from Audit Logs using Subgraph Anomaly Detection and LLMs | arXiv'25 | [arxiv](https://arxiv.org/abs/2510.15188) · [pdf](OCR-APT_2025.pdf) | 子图异常 + LLM 攻击故事重建 |
 | 5 | **Auto-Prov**: An End-to-End Framework for Functionality-Embedded Provenance Graph Construction and Threat Interpretation | arXiv'26 | [arxiv](https://arxiv.org/abs/2603.17100) · [pdf](Auto-Prov_2026.pdf) | LLM 自动构图 + 功能嵌入 + 攻击摘要 |
-| 6 | **LLM-Driven APT by Threat Pattern**: LLM-Driven APT Analysis and Detection Based on Provenance Graph by Threat Pattern | TrustCom'25 | [paper](https://www.computer.org/csdl/proceedings-article/trustcom/2025/653200a524/2dMlcvRsOha) | LLM + 威胁模式匹配检测 |
+
 
 ### Reinforcement Learning
 
@@ -151,23 +147,6 @@
 
 ---
 
-## Robustness & Adversarial
-
-| # | Paper | Venue | Links | Key Technique |
-|---|-------|-------|-------|---------------|
-| 1 | **MirGuard**: Towards a Robust Provenance-based IDS Against Graph Manipulation Attacks | arXiv'25 | [arxiv](https://arxiv.org/abs/2508.10639) · [pdf](MirGuard_2025.pdf) | 逻辑感知对比学习，抗图操纵攻击 |
-
----
-
-## Evaluation Frameworks & Industrial Practice
-
-| # | Paper | Venue | Links | Key Technique |
-|---|-------|-------|-------|---------------|
-| 1 | **PIDSMaker**: Building and Evaluating Provenance-based Intrusion Detection Systems | arXiv'26 | [arxiv](https://arxiv.org/abs/2601.22983) · [pdf](PIDSMaker_2026.pdf) | 统一开源评估框架，8个 PIDS 标准化对比 |
-| 2 | **EvalPIDS-Industry**: Evaluate PIDSes in Industrial Scenarios | arXiv'26 | [arxiv](https://arxiv.org/abs/2603.22982) · [pdf](EvalPIDS_Industry_2026.pdf) | 首次工业场景系统评估，误报缓解方法 |
-
----
-
 ## Provenance Systems & EDR Integration
 
 | # | Paper | Venue | Links | Key Technique |
@@ -181,7 +160,7 @@
 | # | Paper | Venue | Links | Key Technique |
 |---|-------|-------|-------|---------------|
 | 1 | **METANOIA**: A Lifelong IDS for Mitigating Concept Drift | arXiv'25 | [arxiv](https://arxiv.org/abs/2501.00438) · [pdf](METANOIA_2025.pdf) | 终身学习适应环境变化 |
-| 2 | **Tidal**: Tackling Concept Drift in Provenance-Based APT Detection | NINeS'26 | [paper](https://doi.org/10.4230/OASIcs.NINeS.2026.1) | Transformer 迁移学习 + 概念漂移适应 |
+
 
 ---
 
@@ -205,7 +184,6 @@
 | MAGIC | [FDUDSDE/MAGIC](https://github.com/FDUDSDE/MAGIC) | ![](https://img.shields.io/github/stars/FDUDSDE/MAGIC?style=social) |
 | ORTHRUS | [ubc-provenance/orthrus](https://github.com/ubc-provenance/orthrus) | ![](https://img.shields.io/github/stars/ubc-provenance/orthrus?style=social) |
 | ProHunter | [xueboQiu/ProHunter](https://github.com/xueboQiu/ProHunter) | ![](https://img.shields.io/github/stars/xueboQiu/ProHunter?style=social) |
-| PIDSMaker | [pidsmaker/pidsmaker](https://github.com/pidsmaker/pidsmaker) | ![](https://img.shields.io/github/stars/pidsmaker/pidsmaker?style=social) |
 | DARPA TC | [darpa-i2o/Transparent-Computing](https://github.com/darpa-i2o/Transparent-Computing) | ![](https://img.shields.io/github/stars/darpa-i2o/Transparent-Computing?style=social) |
 
 > 📢 如果你知道其他论文的开源代码，欢迎 PR 补充！
